@@ -1,14 +1,20 @@
 const { Events } = require('discord.js');
 
+require('dotenv').config();
+
+const ROLE_VATA_ID = process.env.ROLE_VATA_ID;
+const ROLE_PITTA_ID = process.env.ROLE_PITTA_ID;
+const ROLE_KAPHA_ID = process.env.ROLE_KAPHA_ID;
+
 module.exports = {
 	name: Events.InteractionCreate,
 	async execute(interaction) {
     if (!interaction.isButton()) return;
 
     const ROLES = {
-        ROLE_VATA  : "1068353851142459433",
-        ROLE_PITTA : "1068353998198952097",
-        ROLE_KAPHA : "1068354066373152899",
+        ROLE_VATA  : ROLE_VATA_ID,
+        ROLE_PITTA : ROLE_PITTA_ID,
+        ROLE_KAPHA : ROLE_KAPHA_ID,
     }
 
     const customId = interaction.customId;
