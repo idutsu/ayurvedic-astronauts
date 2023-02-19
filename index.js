@@ -30,4 +30,4 @@ for (const file of eventFiles) {
 // 	client.commands.set(command.data.name, command);
 // }
 
-// client.login(TOKEN)
+client.login(TOKEN)
